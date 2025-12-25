@@ -154,7 +154,7 @@
         // Thời gian dạo đầu (tính bằng giây).
         // Nếu lời vẫn nhanh -> Tăng số này lên.
         // Nếu lời bị chậm -> Giảm số này xuống.
-        const OFFSET = 15.5; 
+        const OFFSET = 1; 
 
         const LYRICS_DATA = [
             {time: 0.00 + OFFSET, text: "Last Christmas, I gave you my heart"},
@@ -168,7 +168,7 @@
             {time: 31.06 + OFFSET, text: "This year, to save me from tears"},
             {time: 34.97 + OFFSET, text: "I'll give it to someone special"}
         ];  
-              
+
         const zFactor = isMobile ? 1.4 : 1.0;
         const SCENE_CONFIG = { 
             scaleFar: isMobile ? 8.0 : 10.00, 
