@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Merry Xmas Ngọc Linh (Smart Optimized)</title>
+    <title>Merry Xmas Ngọc  (Smart Optimized)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -151,8 +151,24 @@
         
         const AI_SKIP_FRAMES = isMobile ? 8 : 2; 
 
-        const LYRICS_DATA = [{time:0.00,text:"Last Christmas, I gave you my heart"},{time:4.00,text:"But the very next day, you gave it away"},{time:7.13,text:"Last Christmas, I gave you my heart"},{time:11.08,text:"But the very next day, you gave it away"},{time:15.08,text:"This year, to save me from tears"},{time:18.99,text:"I'll give it to someone special"},{time:23.12,text:"Last Christmas, I gave you my heart"},{time:27.02,text:"But the very next day, you gave it away"},{time:31.06,text:"This year, to save me from tears"},{time:34.97,text:"I'll give it to someone special"}];
-        
+        // Thời gian dạo đầu (tính bằng giây).
+        // Nếu lời vẫn nhanh -> Tăng số này lên.
+        // Nếu lời bị chậm -> Giảm số này xuống.
+        const OFFSET = 15.5; 
+
+        const LYRICS_DATA = [
+            {time: 0.00 + OFFSET, text: "Last Christmas, I gave you my heart"},
+            {time: 4.00 + OFFSET, text: "But the very next day, you gave it away"},
+            {time: 7.13 + OFFSET, text: "Last Christmas, I gave you my heart"},
+            {time: 11.08 + OFFSET, text: "But the very next day, you gave it away"},
+            {time: 15.08 + OFFSET, text: "This year, to save me from tears"},
+            {time: 18.99 + OFFSET, text: "I'll give it to someone special"},
+            {time: 23.12 + OFFSET, text: "Last Christmas, I gave you my heart"},
+            {time: 27.02 + OFFSET, text: "But the very next day, you gave it away"},
+            {time: 31.06 + OFFSET, text: "This year, to save me from tears"},
+            {time: 34.97 + OFFSET, text: "I'll give it to someone special"}
+        ];  
+              
         const zFactor = isMobile ? 1.4 : 1.0;
         const SCENE_CONFIG = { 
             scaleFar: isMobile ? 8.0 : 10.00, 
