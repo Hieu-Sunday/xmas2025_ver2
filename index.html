@@ -12,7 +12,9 @@
         
         #bg-gradient {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
-            background: radial-gradient(circle at 50% 40%, #7b0d1e 0%, #4a0e16 50%, #1a0505 100%);
+            /* Giả sử ảnh của bạn là file PNG. Nếu là JPG thì đổi thành .jpg */
+            background: url('./res/back.png') no-repeat center center; 
+            background-size: cover; /* Dòng này giúp ảnh tự co giãn vừa khít màn hình */
         }
         
         #black-void {
